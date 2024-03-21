@@ -1,0 +1,11 @@
+-- alter table player_details modify L1_Status varchar(30);
+-- alter table player_details modify L2_Status varchar(30);
+-- alter table player_details modify P_ID int primary key;
+-- alter table player_details drop myunknowncolumn;
+select * from level_details2;
+alter table level_details2 drop myunknowncolumn;
+alter table level_details2 change timestamp start_datetime datetime;
+alter table level_details2 modify Dev_Id varchar(10);
+alter table level_details2 modify Difficulty varchar(15);
+alter table level_details2 add primary key(P_ID,Dev_id,start_datetime);
+select * from level_details2;
